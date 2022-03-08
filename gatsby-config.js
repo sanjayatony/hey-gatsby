@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Tony Sanjaya`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Tony Sanjaya`,
+      summary: `Web Engineer. Father. Nerd. He/His`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Web Engineer. Father. Nerd. He/His`,
+    siteUrl: `https://tonys.dev`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `sanjayatony`,
     },
   },
   plugins: [
