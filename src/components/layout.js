@@ -32,7 +32,7 @@ const Layout = ({ location, title, children }) => {
       <div>
         <Link to="/">
           <StaticImage
-            className="bio-avatar"
+            className="mx-auto rounded-full mb-2"
             layout="fixed"
             formats={["auto", "webp", "avif"]}
             src="../images/profile-pic.png"
@@ -43,7 +43,7 @@ const Layout = ({ location, title, children }) => {
           />
         </Link>
         <Link
-          className="text-center text-gray-400 uppercase tracking-wider text-sm"
+          className="text-center text-gray-400 uppercase tracking-widest text-sm block"
           to="/"
         >
           {title}
@@ -54,12 +54,12 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div
-      className="max-w-screen-md mx-auto px-4"
+      className="max-w-screen-sm mx-auto px-4"
       data-is-root-path={isRootPath}
     >
       <header className="py-4 mb-12">{header}</header>
       <main>{children}</main>
-      <footer>© {new Date().getFullYear()}</footer>
+      {/* <footer>© {new Date().getFullYear()}</footer> */}
     </div>
   )
 }
