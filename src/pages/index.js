@@ -24,24 +24,24 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
-      <ol style={{ listStyle: `none` }}>
+      <ol className="list-none">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
             <li key={post.fields.slug}>
               <article
-                className="post-list-item"
+                className="p-8 border border-slate-200 rounded-md shadow-lg mb-12"
                 itemScope
                 itemType="http://schema.org/Article"
               >
-                <header>
-                  <h2>
+                <header className="text-center mb-4">
+                  <small>{post.frontmatter.date}</small>
+                  <h2 className="text-2xl font-bold text-slate-700">
                     <Link to={post.fields.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small>{post.frontmatter.date}</small>
                 </header>
                 <section>
                   <p
@@ -50,6 +50,15 @@ const BlogIndex = ({ data, location }) => {
                     }}
                     itemProp="description"
                   />
+                </section>
+                <section className="text-center">
+                  <Link
+                    to={post.fields.slug}
+                    itemProp="url"
+                    className="border border-slate-200 rounded-full inline-block mx-auto text-xs py-2 px-4 mt-6"
+                  >
+                    Read more →
+                  </Link>
                 </section>
               </article>
             </li>

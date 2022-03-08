@@ -22,7 +22,7 @@ const Layout = ({ location, title, children }) => {
             alt="Tony Sanjaya"
           />
         </Link>
-        <h1 className="text-center text-gray-500 uppercase tracking-widest text-sm">
+        <h1 className="text-center text-slate-400 uppercase tracking-widest text-sm">
           <Link to="/">{title}</Link>
         </h1>
       </div>
@@ -43,7 +43,7 @@ const Layout = ({ location, title, children }) => {
           />
         </Link>
         <Link
-          className="text-center text-gray-500 uppercase tracking-wider text-sm"
+          className="text-center text-gray-400 uppercase tracking-wider text-sm"
           to="/"
         >
           {title}
@@ -57,7 +57,7 @@ const Layout = ({ location, title, children }) => {
       className="max-w-screen-md mx-auto px-4"
       data-is-root-path={isRootPath}
     >
-      <header className="py-4">{header}</header>
+      <header className="py-4 mb-12">{header}</header>
       <main>{children}</main>
       <footer>© {new Date().getFullYear()}</footer>
     </div>
