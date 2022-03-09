@@ -31,13 +31,13 @@ const BlogIndex = ({ data, location }) => {
           return (
             <li key={post.fields.slug}>
               <article
-                className="p-8 border border-slate-200 rounded-md shadow-lg mb-12"
+                className="p-8 border border-slate-200 rounded-md shadow-lg mb-12 prose prose-slate max-w-none"
                 itemScope
                 itemType="http://schema.org/Article"
               >
-                <header className="text-center mb-4">
+                <header className="text-center mb-4 not-prose">
                   <small>{post.frontmatter.date}</small>
-                  <h2 className="text-2xl font-bold text-slate-700">
+                  <h2 className="text-slate-700 font-bold text-2xl">
                     <Link to={post.fields.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>
@@ -51,11 +51,11 @@ const BlogIndex = ({ data, location }) => {
                     itemProp="description"
                   />
                 </section>
-                <section className="text-center">
+                <section className="text-center not-prose">
                   <Link
                     to={post.fields.slug}
                     itemProp="url"
-                    className="border border-slate-200 rounded-full inline-block mx-auto text-xs py-2 px-4 mt-6"
+                    className="border border-slate-200 rounded-full inline-block mx-auto text-xs py-2 px-4 mt-6 hover:bg-slate-200 hover:text-slate-700"
                   >
                     Read more →
                   </Link>
